@@ -4,11 +4,13 @@ import {BrowserModule} from '@angular/platform-browser';
 import {AppComponent} from './app.component';
 import {AltaClienteComponent} from './componentes/alta-cliente/alta-cliente.component';
 import {FormsModule} from "@angular/forms";
+import { ListadoClientesComponent } from './componentes/listado-clientes/listado-clientes.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    AltaClienteComponent
+    AltaClienteComponent,
+    ListadoClientesComponent
   ],
   imports: [
     BrowserModule,

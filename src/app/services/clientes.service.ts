@@ -1,5 +1,6 @@
 import {Injectable} from '@angular/core';
 import {Cliente, Grupo} from "../models/cliente.model";
+import {Observable, of} from "rxjs";
 
 @Injectable({
   providedIn: 'root'
@@ -13,8 +14,8 @@ export class ClientesService {
     {id: 3, nombre: 'Deudores'}
   ]
 
-  getClientes(): Cliente[] {
-    return this.clientes
+  getClientes(): Observable<Cliente[]> {
+    return of(this.clientes)
   }
 
   getGrupos(): Grupo[] {
@@ -24,5 +25,4 @@ export class ClientesService {
   agregarCliente(cliente: Cliente) {
     this.clientes.push(cliente)
   }
-
 }
